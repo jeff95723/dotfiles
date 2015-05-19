@@ -66,40 +66,42 @@ set guifont=Monaco\ for\ Powerline:h15
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 
 "My Bundles!"
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/nerdtree'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'joequery/Stupid-EasyMotion'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tmhedberg/SimpylFold'
-Bundle 'majutsushi/tagbar'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'tell-k/vim-autopep8'
-Bundle 'vim-scripts/python.vim--Vasiliev'
-Bundle 'jondkinney/dragvisuals.vim'
-Bundle 'manuelmayr/C0Vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'oplatek/Conque-Shell'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'vim-scripts/python.vim--Vasiliev'
+Plugin 'jondkinney/dragvisuals.vim'
+Plugin 'manuelmayr/C0Vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'oplatek/Conque-Shell'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
 "Bundle 'LaTeX-Box-Team/LaTeX-Box'
+"
+call vundle#end()
 
 
 " Syntax highlighting and stuff
@@ -246,4 +248,11 @@ let g:syntastic_mode_map = { "mode": "passive",
                            \ "active_filetypes": ["tex", "latex"],
                            \ "passive_filetypes": [] }
 
+" Settings for Investigate.vim
+let g:investigate_use_dash=1
 
+
+" FIX: PluginUpdate => git pull: git-sh-setup: No such file or directory in MacVim (OK in non-GUI version of Vim)
+if has("gui_macvim")
+    set shell=/bin/bash\ -l
+endif

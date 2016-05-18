@@ -99,6 +99,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'oplatek/Conque-Shell'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'tpope/vim-markdown'
 "Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "
 call vundle#end()
@@ -204,15 +207,20 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 "Additional Setting for vim-latex
-nnoremap <c-a> <Plug>IMAP_JumpForward
-map <c-a> <Plug>IMAP_JumpForward
-imap <c-a> <Plug>IMAP_JumpForward
+"nnoremap <c-a> <Plug>IMAP_JumpForward
+"map <c-a> <Plug>IMAP_JumpForward
+"imap <c-a> <Plug>IMAP_JumpForward
+"
+nnoremap <c-a> <Plug>IMAP_JumpForward|:nohls
+map <c-a> <Plug>IMAP_JumpForward|:nohls
+imap <c-a> <Plug>IMAP_JumpForward|:nohls
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_TreatMacViewerAsUNIX = 1
 let g:Tex_ExecuteUNIXViewerInForeground = 1
 let g:Tex_ViewRule_ps = 'open -a Skim'
 let g:Tex_ViewRule_pdf = 'open -a /Applications/Skim.app'
+" let g:Tex_CompileRule_pdf= 'latex --output-format=pdf $*'
 let g:Tex_CompileRule_pdf= 'pdflatex --synctex=1 $*'
 " let g:Tex_CompileRule_pdf= 'pdflatex -interaction=nonstopmode $*'
 

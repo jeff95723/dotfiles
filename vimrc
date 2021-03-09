@@ -75,34 +75,22 @@ Plugin 'gmarik/Vundle.vim'
 
 
 "My Bundles!"
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'tomasr/molokai'
 Plugin 'joequery/Stupid-EasyMotion'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'vim-scripts/python.vim--Vasiliev'
 Plugin 'jondkinney/dragvisuals.vim'
-Plugin 'manuelmayr/C0Vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Raimondi/delimitMate'
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'oplatek/Conque-Shell'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'tpope/vim-markdown'
-"Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "
 call vundle#end()
 
